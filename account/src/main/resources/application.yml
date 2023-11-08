@@ -1,0 +1,10 @@
+server:
+  port: 35010
+spring:
+  main:
+    banner-mode: off
+  jta:
+    log-dir: jta-log-account
+    transaction-manager-id: accountJtaManger
+  profiles:
+    active: uat

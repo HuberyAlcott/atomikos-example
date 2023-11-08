@@ -1,0 +1,10 @@
+server:
+  port: 35020
+spring:
+  main:
+    banner-mode: off
+  jta:
+    log-dir: jta-log-trading
+    transaction-manager-id: tradingJtaManger
+  profiles:
+    active: uat

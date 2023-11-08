@@ -1,0 +1,33 @@
+spring:
+  main:
+    banner-mode: off
+  jta:
+    log-dir: jta-log-account
+    transaction-manager-id: accountJtaManger
+  datasource:
+    type: com.atomikos.jdbc.AtomikosDataSourceBean
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://127.0.0.1:3306/cloud_example_database
+    username: root
+    password: root
+    hikari:
+      maximum-pool-size: 50
+      minimum-idle: 2
+      auto-commit: true
+      connection-timeout: 1800000
+      connection-init-sql: SELECT 1
+      connection-test-query: SELECT 2
+      validation-timeout: 12000
+      idle-timeout: 1200000
+      max-lifetime: 180000
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: validate
+    database-platform: org.hibernate.dialect.MariaDBDialect
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        use_sql_comments: true

@@ -1,0 +1,13 @@
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:35000/eureka/
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+
+spring:
+  application:
+    name: trading-servers
